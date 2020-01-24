@@ -27,13 +27,23 @@ public class AlgorithmTaskTest {
     }
 
     @Test (expected = IllegalArgumentException.class)
-    public void sumLastDigitsBadArguments() {
+    public void sumLastDigitsBadFirstArgument() {
         AlgorithmTask.sumLastDigits(-5, 4);
     }
 
+    @Test (expected = IllegalArgumentException.class)
+    public void sumLastDigitsBadSecondArgument() {
+        AlgorithmTask.sumLastDigits(5, -4);
+    }
+
     @Test(expected = IllegalArgumentException.class)
-    public void findCommonMultipleBadArguments(){
+    public void findCommonMultipleBadFirstArgument(){
         AlgorithmTask.findCommonMultiple(-6,9);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void findCommonMultipleBadSecondArgument(){
+        AlgorithmTask.findCommonMultiple(6,-9);
     }
 
     @Test(expected = IllegalArgumentException.class)
