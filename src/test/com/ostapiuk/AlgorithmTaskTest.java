@@ -11,6 +11,7 @@ public class AlgorithmTaskTest {
 
     @Test
     public void sumLastDigits() {
+
         assertEquals(14, AlgorithmTask.sumLastDigits(3146167, 3));
     }
 
