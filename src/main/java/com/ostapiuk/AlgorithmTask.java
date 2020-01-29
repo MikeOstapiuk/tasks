@@ -18,6 +18,9 @@ public final class AlgorithmTask {
         }
         long result = 0;
         for (; digits > 0; number /= TEN, digits--) {
+            if (number == 0) {
+                return result;
+            }
             result += (number % TEN);
         }
         return result;
